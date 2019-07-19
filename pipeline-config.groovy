@@ -2,7 +2,7 @@ pipelineJob('example') {
     definition {
         cpsScm {
             scm {
-                git('XXX')
+                git('https://github.com/jenkinsci/job-dsl-plugin.git')
             }
         }
     }
