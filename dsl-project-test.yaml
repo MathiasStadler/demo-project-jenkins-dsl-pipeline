@@ -1,9 +1,0 @@
-pipelineJob('example') {
-    definition {
-        cpsScm {
-            scm {
-                git('XXX')
-            }
-        }
-    }
-}
