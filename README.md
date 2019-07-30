@@ -1,2 +1,3 @@
 # demo-project-jenkins-dsl-pipeline
-checkout / load / run a jenkins pipeline (define in a own file) trigger by dsl-project-test.yaml file
+checkout / load / run a JENKINSFILE  in Jenkins CASC server.
+Perform by project https://github.com/MathiasStadler/jenkins-configuration-as-code-all-in-docker.git
