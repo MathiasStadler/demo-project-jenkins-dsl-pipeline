@@ -1,13 +1,11 @@
-// Mandatory - Set the following Git repository in the Source control management section:
-// https://github.com/JFrog/project-examples.git
-pipelineJob('job-dsl-artifactory-pipeline-example') {
-    parameters {
+job('testJob1') {
+        scm {
+            git('git://github.com/quidryan/aws-sdk-test.git')
         }
-
-    definition {
-        cps {
-            script(readFileFromWorkspace('jenkins-examples/pipeline-examples/declarative-example/Jenkinsfile'))
-            sandbox()
+        triggers {
+            scm('H/15 * * * *')
+        }
+        steps {
+            maven('-e clean test')
         }
     }
-}
