@@ -1,11 +1,14 @@
-job('testJob1') {
-        scm {
-            git('git://github.com/quidryan/aws-sdk-test.git')
-        }
-        triggers {
-            scm('H/15 * * * *')
-        }
-        steps {
-            maven('-e clean test')
+pipeline {
+    agent any
+    stages {
+        stage('Build') {
+            steps {
+                sh 'echo "Hello World"'
+                sh '''
+                    echo "Multiline shell steps works too"
+                    ls -lah
+                '''
+            }
         }
     }
+}
